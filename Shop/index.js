@@ -2,7 +2,6 @@ import express from 'express';
 import mongoose from 'mongoose';
 import multer from 'multer';
 import { registerValidation,loginValidation, productCreateValidation} from './validation.js';
-import { use } from 'bcrypt/promises.js';
 import checkAuth from './utils/checkAuth.js'; 
 import{userController ,productController} from './controllers/index.js';
 import handleValidErrors from './utils/handleValidErrors.js';
