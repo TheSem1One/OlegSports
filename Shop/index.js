@@ -1,11 +1,11 @@
 import express from 'express';
-import jwt from "jsonwebtoken";
-import bcrypt from "bcrypt";
 import mongoose from 'mongoose';
-import { registerValidation } from './validations/auth.js';
-import { validationResult } from "express-validator";
-import UserModel from './models/user.js';
+import multer from 'multer';
+import { registerValidation,loginValidation, productCreateValidation} from './validation.js';
 import { use } from 'bcrypt/promises.js';
+import checkAuth from './utils/checkAuth.js'; 
+import{userController ,productController} from './controllers/index.js';
+import handleValidErrors from './utils/handleValidErrors.js';
 
 mongoose.connect(
     'mongodb+srv://admin:admin@cluster0.apc7q.mongodb.net/blog?retryWrites=true&w=majority&appName=Cluster0')
@@ -15,103 +15,36 @@ mongoose.connect(
 
 const app= express();
 
+const storage = multer.diskStorage({
+    destination : (_, __, cb) =>{
+        cb(null, 'uploads');
+    },
+    filename : (_, file, cb) =>{
+        cb(null, file.originalname);
+    } 
+});
+
+const uploads = multer({storage});
 
 app.use(express.json())
-
-app.get('/' , (req, res) =>{
-    res.send('111 Hello World!');
-})
-
-app.post('/auth/login' ,async (req,res) =>{
-    try{
-        const user = await UserModel.findOne({ email : req.body.email })
-        if(!user){
-            return res.status(404).json({
-                message : 'Невірний логін або пароль',
-            });
-        }
+app.use('/uploads', express.static('uploads'));
 
 
-    const isValidPass =await bcrypt.compare(req.body.password , user._doc.passwordHash);
-    if (!isValidPass){
-        return res.status(404).json({
-            message :'Невірний логін або пароль',
-        });
-    }
+app.post('/auth/login' ,loginValidation,handleValidErrors,userController.login)
+app.post('/auth/register' ,registerValidation,handleValidErrors,userController.register)
+app.get('/profile' ,checkAuth ,userController.profile);
 
-    const token =jwt.sign({
-        _id : user._id,
-    }, 
-    'uzhnu2024',
-    {
-        expiresIn: '30d'
-    });
-
-
-    const {passwordHash, ...userData}= user._doc;
+app.post('/uploads',checkAuth, uploads.single('image'), (req,res)=>{
     res.json({
-        ...userData,
-        token});
-
-    }
-    catch(err){
-        console.log (err);
-        res.status(500).json({
-            message : "Не вдалось авторизуватись",
-        });
-    }
-})
-app.post('/auth/register' ,registerValidation,async (req,res)=>{
-   try{
-        const errors  =  validationResult(req);
-        if (!errors.isEmpty()){
-        return res.status(400).json(errors.array());
-    }
-
-
-        const password =req.body.password;
-        const salt = await bcrypt.genSalt(10);
-        const hash = await bcrypt.hash(password , salt);
-
-
-        const doc = new UserModel({
-        email : req.body.email,
-        firstName: req.body.firstName,
-        lastName : req.body.lastName,
-        passwordHash :hash,
-        avatarUrl : req.body.avatarUrl
-
+        url:`/uploads/${req.file.originalname}`,
     });
-
-    const user = await doc.save();
-    const token =jwt.sign({
-        _id : user._id,
-    }, 
-    'uzhnu2024',
-    {
-        expiresIn: '30d'
-    });
-
-    const {passwordHash, ...userData}= user._doc;
-    res.json({
-        ...userData,
-        token});
-   }
-   catch(err){
-    console.log (err);
-    res.status(500).json({
-        message : "can't create a register"
-    })}
 });
 
-app.get('/profile' , (req,res)=>{
-    try{
-        
-    }
-    catch(err){
-
-    }
-});
+app.get('/products',productController.getAll);
+app.get('/products/:id',productController.getOne);
+app.post('/products', checkAuth,productCreateValidation,handleValidErrors,productController.create);
+app.delete('/products/:id', checkAuth,productController.remove);
+app.patch('/products/:id', checkAuth,productCreateValidation,handleValidErrors, productController.update);
 
 app.listen(4444, (err) => {
     if (err){
