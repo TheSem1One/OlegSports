@@ -1,0 +1,631 @@
+@use "../utils" as *;
+@use "../global" as *;
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255 255 255);
+  overflow: hidden;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgb(53 53 53);
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  margin: 0 auto;
+  width: 83.67%;
+}
+
+.brandTitle {
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+  font: 400 60px/1.14 "Island Moments", Helvetica, Arial, serif;
+  color: rgb(255 255 255);
+  text-align: center;
+}
+
+.workingHours {
+  z-index: 1;
+  margin: 26px 0 19px;
+  min-width: 0;
+  font: 400 20px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(255 255 255);
+  letter-spacing: -0.8px;
+}
+
+.phoneNumber {
+  z-index: 1;
+  margin: 22px 0 23px;
+  min-width: 0;
+  font: 400 20px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(255 255 255);
+  letter-spacing: -1px;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  margin: 18px 0 24px;
+  width: 151px;
+  min-width: 0;
+}
+
+.socialIcon1 {
+  z-index: 1;
+  margin: 2px 0 0;
+  width: 25px;
+  min-width: 0;
+}
+
+.socialIcon2 {
+  margin: 0 0 2px;
+  width: 25px;
+  min-width: 0;
+}
+
+.socialIcon3 {
+  margin: 1px 0;
+  width: 25px;
+  min-width: 0;
+}
+
+.navigationContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgb(255 255 255);
+  outline: 1px solid rgb(53 53 53);
+  outline-offset: -1px;
+}
+
+.mainMenu {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  margin: 13px auto 10px;
+  width: 82.73%;
+}
+
+.menLink {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin: 1px 0 0;
+  min-width: 0;
+  font: 400 14px/1.42 "Kaisei HarunoUmi", Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  text-align: center;
+}
+
+.womenLink {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin: 1px 0 0;
+  min-width: 0;
+  font: 400 14px/1.42 "Kaisei HarunoUmi", Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  text-align: center;
+}
+
+.kidsLink {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin: 1px 0 0;
+  min-width: 0;
+  font: 400 14px/1.42 "Kaisei HarunoUmi", Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  text-align: center;
+}
+
+.blogLink {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin: 1px 0 0;
+  min-width: 0;
+  font: 400 14px/1.42 "Kaisei HarunoUmi", Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  text-align: center;
+}
+
+.saleLink {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin: 1px 0 0;
+  min-width: 0;
+  font: 400 14px/1.42 "Kaisei HarunoUmi", Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  text-align: center;
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 1px;
+  width: 122px;
+  min-width: 0;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.searchIcon {
+  margin: 2px 0 2px 8px;
+  width: 16px;
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 23px 0;
+  margin: 74px 0 0;
+  width: 85.99%;
+}
+
+.heroImages {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  width: 100%;
+}
+
+.heroImage1 {
+  width: 564px;
+  min-width: 0;
+}
+
+.heroImage2 {
+  width: 621px;
+  min-width: 0;
+}
+
+.heroImage3 {
+  width: 400px;
+  min-width: 0;
+}
+
+.colorPalette {
+  display: flex;
+  gap: 0 12px;
+  width: 9.02%;
+}
+
+.paletteImage {
+  z-index: 4;
+  width: 20px;
+  min-width: 0;
+}
+
+.colorSwatch1 {
+  width: 20px;
+  min-width: 0;
+  min-height: 20px;
+  background-color: rgb(255 255 255);
+  border-radius: 10px;
+  outline: 1px solid rgb(0 0 0);
+  outline-offset: -1px;
+}
+
+.colorSwatch2 {
+  width: 20px;
+  min-width: 0;
+  min-height: 20px;
+  background-color: rgb(255 255 255);
+  border-radius: 10px;
+  outline: 1px solid rgb(0 0 0);
+  outline-offset: -1px;
+}
+
+.colorSwatch3 {
+  width: 20px;
+  min-width: 0;
+  min-height: 20px;
+  background-color: rgb(255 255 255);
+  border-radius: 10px;
+  outline: 1px solid rgb(0 0 0);
+  outline-offset: -1px;
+}
+
+.colorSwatch4 {
+  width: 20px;
+  min-width: 0;
+  min-height: 20px;
+  background-color: rgb(255 255 255);
+  border-radius: 10px;
+  outline: 1px solid rgb(0 0 0);
+  outline-offset: -1px;
+}
+
+.promotionalSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 39px 0;
+  margin: 31px 0 0;
+  width: 73.54%;
+}
+
+.promotionalTitle {
+  z-index: 1;
+  font: 400 24px/1.45 "Kaisei HarunoUmi", Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.productGrid {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  width: 100%;
+}
+
+.productCard1 {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 2px 0 0;
+  width: 225px;
+  min-width: 0;
+}
+
+.productImage1 {
+  width: 100%;
+}
+
+.productSku1 {
+  font: 400 12px/1.41 "Kaisei HarunoUmi", Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.productName1 {
+  margin: 1px 24px 0 0;
+  font: 400 12px/1.25 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: -0.1px;
+}
+
+.productCard2 {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 3px 0 0;
+  width: 225px;
+  min-width: 0;
+}
+
+.productImage2 {
+  width: 100%;
+}
+
+.productSku2 {
+  font: 400 12px/1.41 "Kaisei HarunoUmi", Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.productName2 {
+  margin: 1px 0 0;
+  font: 400 12px/1.25 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.productCard3 {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  margin: 2px 0 0;
+  width: 225px;
+  min-width: 0;
+}
+
+.productImage3 {
+  width: 100%;
+}
+
+.productSku3 {
+  font: 400 12px/1.41 "Kaisei HarunoUmi", Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.productName3 {
+  margin: 1px 5px 0 0;
+  font: 400 12px/1.25 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.productCard4 {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 2px 0 0;
+  width: 190px;
+  min-width: 0;
+}
+
+.productImage4 {
+  width: 100%;
+}
+
+.productSku4 {
+  margin: 0 20px 0 0;
+  font: 400 12px/1.41 "Kaisei HarunoUmi", Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.productName4 {
+  margin: 1px 39px 0 0;
+  font: 400 12px/1.25 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: -0.1px;
+}
+
+.productCard5 {
+  display: flex;
+  flex-direction: column;
+  width: 173px;
+  min-width: 0;
+}
+
+.productImage5 {
+  width: 100%;
+}
+
+.productSku5 {
+  margin: 2px 3px 0 0;
+  font: 400 12px/1.41 "Kaisei HarunoUmi", Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.productName5 {
+  margin: 1px 0 0;
+  font: 400 12px/1.25 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: -0.1px;
+}
+
+.productCard6 {
+  display: flex;
+  flex-direction: column;
+  gap: 1px 0;
+  width: 201px;
+  min-width: 0;
+}
+
+.productImage6 {
+  width: 100%;
+}
+
+.productSku6 {
+  margin: 0 31px 0 0;
+  font: 400 12px/1.41 "Kaisei HarunoUmi", Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.productName6 {
+  font: 400 12px/1.25 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+  letter-spacing: -0.1px;
+}
+
+.footballPromoSection {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px 0;
+  margin: 42px 0 0;
+  width: 62.5%;
+}
+
+.footballPromoImage {
+  z-index: 1;
+  width: 100%;
+}
+
+.footballPromoText {
+  font: 400 15px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.poolPromoSection {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px 0;
+  margin: 21px 0 0;
+  width: 53.33%;
+}
+
+.poolPromoImage {
+  z-index: 1;
+  width: 100%;
+}
+
+.poolPromoText {
+  font: 400 15px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.footerSection {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px 0;
+  margin: 57px 0 0;
+  width: 100%;
+}
+
+.footerDivider {
+  width: 100%;
+  height: 1px;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  margin: 0 6.41% 0 auto;
+  width: 81.98%;
+}
+
+.helpColumn {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 12px 0;
+  width: 100px;
+  min-width: 0;
+}
+
+.helpTitle {
+  font: 400 20px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.helpLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 24px 0;
+  margin: 0 15px 0 0;
+}
+
+.paymentLink {
+  margin: 0 35px 0 0;
+  font: 400 14px/1.21 Inter, Helvetica, Arial, serif;
+  color: rgb(102 102 102);
+}
+
+.deliveryLink {
+  margin: 0 19px 0 0;
+  font: 400 14px/1.21 Inter, Helvetica, Arial, serif;
+  color: rgb(102 102 102);
+}
+
+.returnsLink {
+  font: 400 14px/1.21 Inter, Helvetica, Arial, serif;
+  color: rgb(102 102 102);
+}
+
+.brandsColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 12px;
+  width: 194px;
+  min-width: 0;
+}
+
+.brandsTitle {
+  font: 400 20px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.brandLogos {
+  display: grid;
+  align-content: start;
+  gap: 23px 74px;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.brandLogo1 {
+  grid-row: span 1;
+  grid-column: span 1;
+  width: 60px;
+}
+
+.brandLogo2 {
+  grid-row: span 1;
+  grid-column: span 1;
+  width: 60px;
+}
+
+.brandLogo3 {
+  grid-row: span 1;
+  grid-column: span 1;
+  width: 60px;
+}
+
+.brandLogo4 {
+  grid-row: span 1;
+  grid-column: span 1;
+  width: 60px;
+}
+
+.supportColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1px 0 20px;
+  width: 291px;
+  min-width: 0;
+}
+
+.supportTitle {
+  font: 400 20px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(0 0 0);
+}
+
+.emailContainer {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 14px 0 0;
+  width: 100%;
+  background-color: rgb(255 255 255);
+  border-radius: 7px;
+  outline: 1px solid rgb(102 102 102);
+  outline-offset: -1px;
+}
+
+.supportEmail {
+  margin: 7px 0 8px 6px;
+  width: 74.91%;
+  font: 400 20px/1.2 Inter, Helvetica, Arial, serif;
+  color: rgb(102 102 102);
+}
+
+.contactBtn {
+  display: flex;
+  justify-content: center;
+  margin: 9px auto 0;
+  width: 106px;
+  max-width: 100%;
+  font: 400 16px/1.18 Inter, Helvetica, Arial, serif;
+  color: rgb(255 255 255);
+  text-align: center;
+  background-color: rgb(0 0 0);
+  border-radius: 2px;
+  padding: 4.5px 14px;
+  outline: 1px solid rgb(102 102 102);
+  outline-offset: -1px;
+}
+
+.orderProcessingInfo {
+  display: flex;
+  flex-direction: column;
+  margin: 54px 0 0;
+  width: 100%;
+  background-color: rgb(53 53 53);
+}
+
+.orderProcessingText {
+  display: flex;
+  justify-content: center;
+  margin: 26px auto 25px;
+  font: 400 16px/1.43 "Kaisei HarunoUmi", Helvetica, Arial, serif;
+  color: rgb(255 255 255);
+  text-align: center;
+}
