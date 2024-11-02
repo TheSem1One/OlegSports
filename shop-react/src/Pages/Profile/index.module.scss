@@ -9,171 +9,13 @@
   overflow: hidden;
   width: 1920;
   height: 1080;
-}
-
-.headerContent {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background-color: rgb(53 53 53);
-}
-
-.headerInfo {
-  display: flex;
-  justify-content: space-between;
-  gap: 0 10px;
-  margin: 0 auto;
-  width: 83.67%;
-}
-
-.companyName {
-  display: flex;
-  justify-content: center;
-  min-width: 0;
-  font: 400 60px/1.14 "Island Moments", Helvetica, Arial, serif;
-  color: rgb(255 255 255);
-  text-align: center;
-}
-
-.workingHours {
-  z-index: 1;
-  margin: 26px 0 19px;
-  min-width: 0;
-  font: 400 20px/1.2 Inter, Helvetica, Arial, serif;
-  color: rgb(255 255 255);
-  letter-spacing: -0.8px;
-}
-
-.phoneNumber {
-  z-index: 1;
-  margin: 22px 0 23px;
-  min-width: 0;
-  font: 400 20px/1.2 Inter, Helvetica, Arial, serif;
-  color: rgb(255 255 255);
-  letter-spacing: -1px;
-}
-
-.socialMediaIcons {
-  display: flex;
-  justify-content: space-between;
-  gap: 0 10px;
-  margin: 18px 0 24px;
-  width: 151px;
-  min-width: 0;
-}
-
-.socialIcon1 {
-  z-index: 1;
-  margin: 2px 0 0;
-  width: 25px;
-  min-width: 0;
-}
-
-.socialIcon2 {
-  margin: 0 0 2px;
-  width: 25px;
-  min-width: 0;
-}
-
-.socialIcon3 {
-  margin: 1px 0;
-  width: 25px;
-  min-width: 0;
-}
-
-.navigationWrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background-color: rgb(255 255 255);
-  outline: 1px solid rgb(53 53 53);
-  outline-offset: -1px;
-}
-
-.mainMenu {
-  display: flex;
-  justify-content: space-between;
-  gap: 0 10px;
-  margin: 13px auto 10px;
-  width: 82.73%;
-}
-
-.menCategory {
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  margin: 1px 0 0;
-  min-width: 0;
-  font: 400 14px/1.42 "Kaisei HarunoUmi", Helvetica, Arial, serif;
-  color: rgb(0 0 0);
-  text-align: center;
-}
-
-.womenCategory {
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  margin: 1px 0 0;
-  min-width: 0;
-  font: 400 14px/1.42 "Kaisei HarunoUmi", Helvetica, Arial, serif;
-  color: rgb(0 0 0);
-  text-align: center;
-}
-
-.kidsCategory {
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  margin: 1px 0 0;
-  min-width: 0;
-  font: 400 14px/1.42 "Kaisei HarunoUmi", Helvetica, Arial, serif;
-  color: rgb(0 0 0);
-  text-align: center;
-}
-
-.blogCategory {
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  margin: 1px 0 0;
-  min-width: 0;
-  font: 400 14px/1.42 "Kaisei HarunoUmi", Helvetica, Arial, serif;
-  color: rgb(0 0 0);
-  text-align: center;
-}
-
-.saleCategory {
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  margin: 1px 0 0;
-  min-width: 0;
-  font: 400 14px/1.42 "Kaisei HarunoUmi", Helvetica, Arial, serif;
-  color: rgb(0 0 0);
-  text-align: center;
-}
-
-.searchContainer {
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 1px;
-  width: 122px;
-  min-width: 0;
-  background-color: rgb(217 217 217);
-  border-radius: 10px;
-}
-
-.searchIcon {
-  margin: 2px 0 2px 8px;
-  width: 16px;
+  margin: 0 0 267px 0;
 }
 
 .accountSection {
   z-index: 2;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0 10px;
+  gap: 0 350px;
   margin: 66px 0 0;
   width: 84.84%;
 }
@@ -181,7 +23,7 @@
 .accountContent {
   display: flex;
   justify-content: space-between;
-  gap: 0 10px;
+  gap: 0 5px;
   width: 602px;
   min-width: 0;
 }
@@ -189,40 +31,32 @@
 .accountMenu {
   display: flex;
   flex-direction: column;
-  gap: 22px 0;
-  margin: 0 0 3px;
+  gap: 12px 0;
   width: 143px;
   min-width: 0;
+  text-align: left;
 }
 
 .accountMenuTitle {
   z-index: 1;
-  margin: 0 30px 0 1px;
+  margin: 0 25px 0 1px;
   font: 400 20px/1.2 Inter, Helvetica, Arial, serif;
   color: rgb(0 0 0);
-}
-
-.myOrdersLink {
-  z-index: 3;
-  margin: 0 31px 0 1px;
-  font: 400 14px/1.21 Inter, Helvetica, Arial, serif;
-  color: rgb(102 102 102);
-}
-
-.wishlistLink {
-  margin: 0 21px 0 1px;
-  font: 400 14px/1.21 Inter, Helvetica, Arial, serif;
-  color: rgb(102 102 102);
 }
 
 .generalInfoLink {
   font: 400 14px/1.21 Inter, Helvetica, Arial, serif;
   color: rgb(102 102 102);
+  text-align: left;
+  cursor: pointer;
+  text-decoration: underline;
+
 }
 
 .logoutLink {
   font: 400 14px/1.21 Inter, Helvetica, Arial, serif;
   color: rgb(102 102 102);
+  cursor: pointer;
 }
 
 .accountDetails {
@@ -241,31 +75,8 @@
 .personalInfo {
   display: flex;
   flex-direction: column;
-  width: 83px;
-}
-
-.firstNameLabel {
-  font: 400 14px/1.21 Inter, Helvetica, Arial, serif;
-  color: rgb(102 102 102);
-}
-
-.middleNameLabel {
-  margin: 25px 0 0;
-  font: 400 14px/1.21 Inter, Helvetica, Arial, serif;
-  color: rgb(102 102 102);
-  letter-spacing: -0.1px;
-}
-
-.lastNameLabel {
-  margin: 22px 14px 0 0;
-  font: 400 14px/1.21 Inter, Helvetica, Arial, serif;
-  color: rgb(102 102 102);
-}
-
-.emailLabel {
-  margin: 22px 0 0;
-  font: 400 14px/1.21 Inter, Helvetica, Arial, serif;
-  color: rgb(102 102 102);
+  width: 150;
+  text-align: left;
 }
 
 .userProfilePic {
@@ -273,189 +84,22 @@
   flex-direction: column;
   align-items: center;
   gap: 14px 0;
-  width: 173px;
-  min-width: 0;
+  width: 400px;
+  max-width: 400px;
 }
 
 .profileImage {
   z-index: 1;
   width: 100%;
   border-radius: 20px;
-}
+  max-width:100%;
+  height:auto;
+  width: 100%;       
+  height: 100%;      
+  object-fit: cover; 
 
-.userInitials {
-  font: 400 14px/1.21 Inter, Helvetica, Arial, serif;
-  color: rgb(0 0 0);
+  
 }
-
-.footerSection {
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 19px 0;
-  margin: 310px 0 0;
-  width: 100%;
-}
-
-.footerDivider {
-  width: 100%;
-  height: 1px;
-}
-
-.footerContent {
-  display: flex;
-  justify-content: space-between;
-  gap: 0 10px;
-  width: 81.98%;
-}
-
-.helpColumn {
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 12px 0;
-  width: 100px;
-  min-width: 0;
-}
-
-.helpTitle {
-  font: 400 20px/1.2 Inter, Helvetica, Arial, serif;
-  color: rgb(0 0 0);
-}
-
-.helpLinks {
-  display: flex;
-  flex-direction: column;
-  gap: 24px 0;
-  margin: 0 15px 0 0;
-}
-
-.paymentLink {
-  margin: 0 35px 0 0;
-  font: 400 14px/1.21 Inter, Helvetica, Arial, serif;
-  color: rgb(102 102 102);
-}
-
-.deliveryLink {
-  margin: 0 19px 0 0;
-  font: 400 14px/1.21 Inter, Helvetica, Arial, serif;
-  color: rgb(102 102 102);
-}
-
-.returnsLink {
-  font: 400 14px/1.21 Inter, Helvetica, Arial, serif;
-  color: rgb(102 102 102);
-}
-
-.brandsColumn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 0 12px;
-  width: 194px;
-  min-width: 0;
-}
-
-.brandsTitle {
-  font: 400 20px/1.2 Inter, Helvetica, Arial, serif;
-  color: rgb(0 0 0);
-}
-
-.brandLogos {
-  display: grid;
-  align-content: start;
-  gap: 23px 74px;
-  width: 100%;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.brandLogo1 {
-  grid-row: span 1;
-  grid-column: span 1;
-  width: 60px;
-}
-
-.brandLogo2 {
-  grid-row: span 1;
-  grid-column: span 1;
-  width: 60px;
-}
-
-.brandLogo3 {
-  grid-row: span 1;
-  grid-column: span 1;
-  width: 60px;
-}
-
-.brandLogo4 {
-  grid-row: span 1;
-  grid-column: span 1;
-  width: 60px;
-}
-
-.supportColumn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1px 0 20px;
-  width: 291px;
-  min-width: 0;
-}
-
-.supportTitle {
-  font: 400 20px/1.2 Inter, Helvetica, Arial, serif;
-  color: rgb(0 0 0);
-}
-
-.supportEmail {
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  margin: 14px 0 0;
-  width: 100%;
-  background-color: rgb(255 255 255);
-  border-radius: 7px;
-  outline: 1px solid rgb(102 102 102);
-  outline-offset: -1px;
-}
-
-.emailAddress {
-  margin: 7px 0 8px 6px;
-  width: 74.91%;
-  font: 400 20px/1.2 Inter, Helvetica, Arial, serif;
-  color: rgb(102 102 102);
-}
-
-.contactBtn {
-  display: flex;
-  justify-content: center;
-  margin: 9px auto 0;
-  width: 106px;
-  max-width: 100%;
-  font: 400 16px/1.18 Inter, Helvetica, Arial, serif;
-  color: rgb(255 255 255);
-  text-align: center;
-  background-color: rgb(0 0 0);
-  border-radius: 2px;
-  padding: 4.5px 14px;
-  outline: 1px solid rgb(102 102 102);
-  outline-offset: -1px;
-}
-
-.orderProcessingInfo {
-  display: flex;
-  flex-direction: column;
-  margin: 18px 0 0;
-  width: 100%;
-  background-color: rgb(53 53 53);
-}
-
-.processingMessage {
-  display: flex;
-  justify-content: center;
-  margin: 24px auto 27px;
-  font: 400 16px/1.43 "Kaisei HarunoUmi", Helvetica, Arial, serif;
-  color: rgb(255 255 255);
-  text-align: center;
+.SDV{
+  text-wrap:nowrap;
 }
