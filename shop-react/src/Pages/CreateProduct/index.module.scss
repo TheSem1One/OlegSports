@@ -1,0 +1,43 @@
+.title {
+    input {
+        font-size: 42px;
+        font-weight: 900;
+    }
+
+    div {
+
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    height: 263px;
+    width: 75%;
+    gap: 0 80px;
+}
+
+.wrapin {
+    width: 400px;
+}
+
+.image {
+    max-width: 400px;
+    max-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-left: 760px;
+}
+
+.buttons {
+    display: flex;
+    position: relative;
+    margin-bottom: 70px;
+    margin-right: 15px;
+}
